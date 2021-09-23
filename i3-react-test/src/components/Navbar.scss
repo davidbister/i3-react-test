@@ -28,7 +28,7 @@ $fontColorWhite: #d9d9d9;
 }
 
 .nav-links {
-  color: $fontColorWhite;
+  color: #d9d9d9;
   text-decoration: none;
   padding: 0.5rem 1rem;
 }
@@ -50,38 +50,32 @@ $fontColorWhite: #d9d9d9;
   .NavbarItems {
     position: relative;
   }
-
   .nav-menu li:not(:first-child) {
     display: flex;
     flex-direction: column;
     width: 100%;
-    //  height: 90vh; if we want tahat menu mobile goes all the way down
     position: absolute;
     top: 80px;
     right: 100%;
     opacity: 1;
     transition: all 0.5s ease;
   }
-
   .nav-menu.active li:not(:first-child) {
-    background: $navbarColor;
+    background: #003da7;
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 1;
   }
-
   .nav-links {
     text-align: center;
     padding: 2rem;
     width: 100%;
     display: table;
   }
-
   .nav-links:hover {
     border-radius: 0;
   }
-
   .menu-icon {
     display: block;
     position: absolute;
@@ -91,7 +85,6 @@ $fontColorWhite: #d9d9d9;
     font-size: 1.8rem;
     cursor: pointer;
   }
-
   .nav-links-mobile {
     display: block;
     text-align: center;
@@ -99,20 +92,16 @@ $fontColorWhite: #d9d9d9;
     margin: 2rem auto;
     border-radius: 4px;
     width: 80%;
-
     text-decoration: none;
-    color: $fontColorWhite;
+    color: #d9d9d9;
     font-size: 1.5rem;
   }
-
   .nav-links-mobile:hover {
-    background: $fontColorWhite;
-
+    background: #d9d9d9;
     transition: 250ms;
   }
-
   .arrow {
-    border: solid $fontColorWhite;
+    border: solid #d9d9d9;
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
