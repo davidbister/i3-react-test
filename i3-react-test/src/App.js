@@ -6,11 +6,14 @@ import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-       
-      </header>
-    </div>
+    <Router>
+      <Navbar/>
+      <Switch>
+        <Route path='/' exact component={FirstPage}/>
+        <Route path='/secondpage' component={SecondPage}/>
+        
+      </Switch>
+    </Router>
   );
 }
 
