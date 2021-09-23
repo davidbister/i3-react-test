@@ -4,10 +4,10 @@ import './Navbar.scss';
 
 function Navbar() {
     const [click, setClick] = useState(false);
-    const [dropdown, setDropdown] = useState(false);
   
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
+
     return (
         <>
         <nav className="navbar">
@@ -16,7 +16,7 @@ function Navbar() {
         </div>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
           <li className='nav-item'>
-            <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+            <Link to='/' className='nav-links ' onClick={closeMobileMenu}>
              FirstPage
             </Link>
           </li> 
@@ -26,6 +26,7 @@ function Navbar() {
             </Link>
             
           </li> 
+          
           
           
           </ul>  
