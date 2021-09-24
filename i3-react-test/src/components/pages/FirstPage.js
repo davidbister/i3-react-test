@@ -1,6 +1,7 @@
 //rfce
 import React,{useRef} from 'react';
-import '../../App.scss';
+
+import './FirstPage.scss'
 import { useFetch } from '../useFetch';
 
 const FirstPage=() => {
