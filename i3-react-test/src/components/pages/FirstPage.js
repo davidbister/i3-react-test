@@ -12,11 +12,7 @@ const FirstPage=() => {
       []
     );
     
-    const imgWidth=200;
-
-    const imgHeight=200;
-    
-    return (
+      return (
         <div>
             
             {loading ? (
@@ -26,7 +22,7 @@ const FirstPage=() => {
             <div key={data.id}>
               <h3>{data.title}</h3>
               <p>{data.body}</p>
-              <img src={data.pic} alt={data.userId} width={imgWidth} height={imgHeight} />
+              <img src={data.img} alt={data.userId} width={data.imgWidth} height={data.imgHeight} />
             </div>
         ))
       )}
