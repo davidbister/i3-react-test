@@ -1,37 +1,38 @@
 //rfce
-import React,{useState,useEffect} from 'react'
+import React,{useRef} from 'react';
 import '../../App.scss';
+import { useFetch } from '../useFetch';
 
-import axios from 'axios';
+const FirstPage=() => {
+    const isComponentMounted = useRef(true);
 
-//I need to imporve this part of code,i will make custom hook :)
-function FirstPage() {
-    const[post,setPosts]=useState([]);
+    const { data, loading, error } = useFetch(
+      "http://localhost:8000/data",
+      isComponentMounted,
+      []
+    );
+    
+    const imgWidth=200;
 
-    useEffect(()=>{
-axios.get('http://localhost:8000/data').then(res=>{
-    console.log(res)
-    setPosts(res.data)
-})
-.catch(err=>{
-    console.log(err)
-})
-    },[])
-    //
+    const imgHeight=200;
     
     return (
         <div>
             
-        <ul>
-            {post.map(post=>(
-                <li key={post.id}>{post.title} <img src={post.pic}alt={post.userId} width={200} height={200} /></li>
-               
-
-            ))}
-        </ul>
+            {loading ? (
+        <div>Loading data...</div>
+      ) : (
+        data.map((data) => (
+            <div key={data.id}>
+              <h3>{data.title}</h3>
+              <p>{data.body}</p>
+              <img src={data.pic} alt={data.userId} width={imgWidth} height={imgHeight} />
+            </div>
+        ))
+      )}
         
     </div>
     );
-}
+};
 
 export default FirstPage
