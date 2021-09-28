@@ -1,0 +1,14 @@
+@media screen and (min-width: 961px) {
+  //veliki
+
+  .content {
+    padding-top: 10px;
+    max-width: 960px;
+    margin: 0 auto;
+    display: grid;
+    grid-auto-rows: minmax(50px, auto);
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 961px) {
+}

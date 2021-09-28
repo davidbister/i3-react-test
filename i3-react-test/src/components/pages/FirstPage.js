@@ -20,10 +20,11 @@ const FirstPage=() => {
         <div>Loading data...</div>
       ) : (
         data.map((data) => (
-            <div key={data.id}>
-              <h3>{data.title}</h3>
-              <p>{data.body}</p>
-              <img src={data.img} alt={data.userId} width={data.imgWidth} height={data.imgHeight} />
+            <div className="content" key={data.id}>
+            
+              <img src={data.img1} alt={data.userId} width={data.imgWidth3} height={data.imgHeight3} />
+              <img src={data.img1} alt={data.userId} width={data.imgWidth3} height={data.imgHeight3} />
+              <img src={data.img1} alt={data.userId} width={data.imgWidth3} height={data.imgHeight3} />
             </div>
         ))
       )}
