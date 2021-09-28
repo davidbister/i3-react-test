@@ -25,3 +25,4 @@ export const useFetch = (url, ref, initialValue) => {
   }, [url, ref]);
   return { loading, data, error };
 };
+//json-server --watch db.json --port 8000
