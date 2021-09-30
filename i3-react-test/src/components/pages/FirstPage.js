@@ -1,8 +1,12 @@
 //rfce
 import React,{useRef,useEffect,useState} from 'react';
 
+
 import './FirstPage.scss'
 import { useFetch } from '../useFetch';
+import ImageSlider from '../ImageSlider';
+import {SliderData} from '../SliderData';
+
 
 const FirstPage=() => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 961);
@@ -24,19 +28,26 @@ useEffect(() => {
     
       return (
         <div>
+         
             
             {loading ? (
-        <div>Loading data...</div>
+        <div> Loading.....</div>
       ) : (
         data.map((data) => (
             <div className={`${isMobile?"content-mobile":"content"}`} key={data.id}>
-            
+              <ImageSlider slides={SliderData} />
+         <div className="child1">
               <img src={data.img1} alt={data.userId} width={data.imgWidth3} height={data.imgHeight3} />
               <img src={data.img1} alt={data.userId} width={data.imgWidth3} height={data.imgHeight3} />
               <img src={data.img1} alt={data.userId} width={data.imgWidth3} height={data.imgHeight3} />
-            </div>
+              </div>
+              
+              </div>
+             
+           
         ))
-      )}
+       
+      ) }
         
     </div>
     );
